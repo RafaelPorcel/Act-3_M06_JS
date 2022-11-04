@@ -99,7 +99,7 @@ function mostrarCoches(){//SE CREA FUNCION
     let codigoCoche = ""; //VARIABLE PARA GUARDAR LO QUE NOS RECORRA EL FOR
     for(let key in cochesDisponibles){//RECORREMOS MEDIANTE UN FOR EL ARRAY cochesDisponibles
         console.log("for del array cochesDisponibles = " + key + ":" + cochesDisponibles[key]);//COMPROBACION POR CONSOLA
-        console.log("for del array cochesDisponibles solo nombres" + key + ":" + cochesDisponibles["nombre"])
+        console.log("for del array cochesDisponibles solo nombres " + key + ":" + cochesDisponibles)
         codigoCoche += cochesDisponibles[key]//A LA VARIABLE codigoCoche SE LE AÑADE LO QUE RECORRE EL FOR
     }
     document.getElementById("divMostrarCoches").innerHTML = codigoCoche;//SE CAMBIA EL CONTENIDO DEL DIV POR LA VARIABLE
@@ -142,10 +142,9 @@ al select con el número de extra , y modifica mostrarCoches() para que por cada
 function selectNombreCoches(){
     let selectName = "";
     for (let j = 0; j < cochesDisponibles.length; j++) {
-        selectName += "<option value='" + cochesDisponibles[j][nombre] + "'></option>";       
+        selectName += "<option value='" + cochesDisponibles[nombre] + "'></option>";       
     }
     console.log("IMPRIMIR NOMBRE COCHES " + selectName)
     document.getElementById("nombreCocheExtraAsignar").innerHTML = selectName;
 }
-
 
